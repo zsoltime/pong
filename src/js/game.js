@@ -19,6 +19,8 @@ function setup() {
   paddlePlayer = Paddle(padding);
   paddleComputer = Paddle(width - padding);
   ball = Ball();
+  scorePlayer = Score();
+  scoreComputer = Score();
 }
 
 function draw() {
@@ -200,19 +202,25 @@ function Ball() {
 }
 
 function Score(name) {
-  let pos = createVector(x, height / 2);
-  let points = 0;
+  // let pos = createVector(x, height / 2);
+  let score = 0;
 
   function render() {
 
   }
 
-  function update() {
+  function reset() {
+    score = 0;
+  }
 
+  function add(points) {
+    score += points
   }
 
   return {
     render: render,
-    update: update
+    reset: reset,
+    add: add,
+    score: score
   }
 }
