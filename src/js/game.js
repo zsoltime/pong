@@ -167,23 +167,11 @@ function Ball() {
       distX = paddle.pos.x - pos.x;
     }
 
-
-
     if (distX <= 0) {
       if (pos.y - paddle.pos.y > 0 && pos.y - paddle.pos.y < paddle.size) {
         velocity.x *= -1;
       }
-      // noLoop();
     }
-
-
-    // let d = dist(pos.x, pos.y, paddle.pos.x, paddle.pos.y);
-    // if (d < 20) {
-    //   console.log(d, pos.y - paddle.pos.y);
-    // }
-    // if (pos.x <= paddle.pos.x) {
-    //   // velocity.x *= -1;
-    // }
   }
 
   function isOffscreen() {
